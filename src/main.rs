@@ -25,7 +25,18 @@ fn main() {
             studio: "CloverWorks".to_string(),
             year: 2022,
         },
+        Anime {
+            title: "Girls' Last Tour".to_string(),
+            studio: "WhiteFox".to_string(),
+            year: 2017,
+        },
+        Anime {
+            title: "Kobayashi-san Chi no Maid Dragon".to_string(),
+            studio: "Kyoto Animation".to_string(),
+            year: 2017,
+        },
     ];
-    let Anime { title, year, .. } = &anime_list[rng.gen_range(0..anime_list.len())];
+    let random_index = rng.gen_range(0..anime_list.len());
+    let Anime { title, year, .. } = &anime_list[random_index];
     println!("Your pick is {} ({})", title, year);
 }
